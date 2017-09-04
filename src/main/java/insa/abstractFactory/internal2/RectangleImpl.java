@@ -3,7 +3,7 @@ package insa.abstractFactory.internal2;
 import insa.abstractFactory.api.Rectangle;
 import java.awt.geom.Point2D;
 
-public class RectangleImpl implements Rectangle {
+class RectangleImpl implements Rectangle {
 	final javafx.scene.shape.Rectangle jfxRec;
 
 	RectangleImpl() {

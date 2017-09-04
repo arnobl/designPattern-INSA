@@ -3,7 +3,7 @@ package insa.abstractFactory.internal2;
 import insa.abstractFactory.api.Polygon;
 import java.awt.geom.Point2D;
 
-public class PolygonImpl implements Polygon {
+class PolygonImpl implements Polygon {
 	final javafx.scene.shape.Polygon jfxPol;
 
 	PolygonImpl() {

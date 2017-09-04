@@ -5,7 +5,7 @@ import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PolygonImpl implements Polygon {
+class PolygonImpl implements Polygon {
 	final List<Point2D> points;
 
 	PolygonImpl() {
