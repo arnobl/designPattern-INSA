@@ -1,6 +1,6 @@
 package insa.proxy.lazyexample;
 
-public class AImpl implements A {
+public final class AImpl implements A {
 	private B b;
 
 	public AImpl() {

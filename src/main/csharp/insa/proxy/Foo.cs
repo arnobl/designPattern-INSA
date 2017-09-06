@@ -1,5 +1,5 @@
 class Foo {
-    private Lazy < MyObject > bar = new Lazy < MyObject > (); 
+    private Lazy<MyObject> bar = new Lazy<MyObject>();
 
     public MyObject getBar() {
         return bar.Value; 
