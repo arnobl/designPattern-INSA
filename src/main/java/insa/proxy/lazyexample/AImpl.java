@@ -1,4 +1,4 @@
-package insa.proxy.lazy;
+package insa.proxy.lazyexample;
 
 public class AImpl implements A {
 	private B b;

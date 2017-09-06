@@ -1,4 +1,4 @@
-package insa.proxy.lazy;
+package insa.proxy.lazyexample;
 
 public class MainProxy {
 	public static void main(final String[] args) {
