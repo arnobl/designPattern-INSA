@@ -7,6 +7,7 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.IntFunction;
 import java.util.function.Predicate;
+import java.util.function.Supplier;
 
 public class Main {
 	public static void main(final String[] args) {
@@ -50,6 +51,10 @@ public class Main {
 		// Look at Function, Runnable, etc. They are tagged as functional interfaces: they have a single abstract method that will be considered
 		// as the command method.
 		// These interfaces are mainly defined in the package java.util.function
+
+		// An interface for producing values.
+		Supplier<String> supplier = () -> "Hello world!";
+		System.out.printf("%s, %s", supplier.get(), supplier.get());
 
 		// A command to convert integer values as string values
 		Function<Integer, String> fct = i -> String.valueOf(i); // This lambda corresponds to the definition of the method "R apply(T t)" defined in Function
