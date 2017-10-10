@@ -3,6 +3,7 @@ package insa.activeobject.latexcompilation.helpers;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
+import java.util.stream.IntStream;
 
 public final class ImageCropper {
 	public static final ImageCropper INSTANCE = new ImageCropper();
@@ -15,7 +16,6 @@ public final class ImageCropper {
 	 * Removes the white margins of the given image.
 	 * @param img The image to crop.
 	 * @return The cropped image or null if the given image is null or fully white.
-	 * @since 3.0
 	 */
 	public Image cropImage(final BufferedImage img) {
 		if(img == null) return null;
@@ -100,21 +100,11 @@ public final class ImageCropper {
 
 
 	private boolean hasColouredPixelColumn(final BufferedImage img, final int x, final int imgHeight) {
-		for(int y = 0; y < imgHeight; y++) {
-			if(img.getRGB(x, y) != 0) {
-				return true;
-			}
-		}
-		return false;
+		return IntStream.range(0, imgHeight).parallel().anyMatch(y -> img.getRGB(x, y) != 0);
 	}
 
 
 	private boolean hasColouredPixelRow(final BufferedImage img, final int y, final int min, final int max) {
-		for(int x = min; x < max; x++) {
-			if(img.getRGB(x, y) != 0) {
-				return true;
-			}
-		}
-		return false;
+		return IntStream.range(min, max).parallel().anyMatch(x -> img.getRGB(x, y) != 0);
 	}
 }

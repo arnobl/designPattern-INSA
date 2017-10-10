@@ -65,7 +65,7 @@ public class LatexBuilder implements Callable<Image> {
 		String pathTex = pathPic + ".tex";
 		Image bi = null;
 
-		try(FileOutputStream fos = new FileOutputStream(pathTex); OutputStreamWriter osw = new OutputStreamWriter(fos);) {
+		try(FileOutputStream fos = new FileOutputStream(pathTex); OutputStreamWriter osw = new OutputStreamWriter(fos)) {
 			osw.append(doc);
 			osw.flush();
 			fos.flush();
@@ -81,7 +81,7 @@ public class LatexBuilder implements Callable<Image> {
 			execute(new String[]{"ps2pdf", pathPic + ".ps", pathPic + ".pdf"});
 			new File(pathPic + ".ps").delete();
 			File file = new File(pathPic + ".pdf");
-			try(RandomAccessFile raf = new RandomAccessFile(file, "r"); FileChannel fc = raf.getChannel();) {
+			try(RandomAccessFile raf = new RandomAccessFile(file, "r"); FileChannel fc = raf.getChannel()) {
 				MappedByteBuffer mbb = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size());
 				PDFFile pdfFile = new PDFFile(mbb);
 				mbb.clear();
