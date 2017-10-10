@@ -30,6 +30,7 @@ public class Frame extends JFrame {
 		textField.addActionListener(e -> {
 			MyFutureTask task = new MyFutureTask(textField, drawingArea);
 			drawingArea.futureImage = task;
+			// The task is submitted to the task executor.
 			service.submit(task);
 			drawingArea.repaint();
 		});
@@ -59,8 +60,10 @@ public class Frame extends JFrame {
 			g.setColor(Color.WHITE);
 			g.fillRect(0, 0, getWidth(), getHeight());
 			g.setColor(Color.BLACK);
+			// On repaint the future object is tested to check whether the task is over.
 			try {
 				if(futureImage != null && futureImage.isDone() && futureImage.get() != null) {
+					// If the task is over, getting the picture to be painted.
 					if(image != null) image.flush();
 					image = futureImage.get();
 					futureImage = null;
@@ -69,9 +72,11 @@ public class Frame extends JFrame {
 				ex.printStackTrace();
 			}
 
+			// If the task is not over or if its execution did not produce a picture, a text is painted
 			if(image == null) {
 				g.drawString(Frame.this.textField.getText(), 100, 100);
 			}else {
+				// Otherwise the created image is painted.
 				g.drawImage(image, 100, 100, null);
 			}
 		}

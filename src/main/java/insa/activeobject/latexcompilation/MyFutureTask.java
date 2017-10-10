@@ -12,9 +12,11 @@ public class MyFutureTask extends FutureTask<Image> {
 		this.area = area;
 	}
 
+	// When the Future task is done, it can notifies its handler.
 	@Override
 	protected void done() {
 		super.done();
+		// In our case, the drawing area is notified to be repainted.
 		area.repaint();
 	}
 }
