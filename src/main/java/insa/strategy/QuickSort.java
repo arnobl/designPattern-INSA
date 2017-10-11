@@ -11,9 +11,9 @@ public class QuickSort<E extends Comparable<E>> extends SortImpl<E> {
 
 	@Override
 	public void sort() {
-		System.out.printf("Before sort: %s\n", list);
+		System.out.printf("Before quick sort: %s\n", list);
 		sort(0, list.size() - 1);
-		System.out.printf("Quick sort: %s\n", list);
+		System.out.printf("After quick sort: %s\n", list);
 	}
 
 	private void sort(int from, int to) {

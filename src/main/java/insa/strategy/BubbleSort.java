@@ -10,9 +10,9 @@ public class BubbleSort<E extends Comparable<E>> extends SortImpl<E> {
 
 	@Override
 	public void sort() {
-		System.out.printf("Before sort: %s\n", list);
+		System.out.printf("Before bubble sort: %s\n", list);
 		bubbleSort();
-		System.out.printf("Bubble sort: %s\n", list);
+		System.out.printf("After bubble sort: %s\n", list);
 	}
 
 	private void bubbleSort() {
