@@ -2,5 +2,4 @@ package insa.singleton
 
 import java.util
 
-object myScalaExceptionCollector extends util.ArrayList[Exception] {
-}
+object myScalaExceptionCollector extends util.ArrayList[Exception]
