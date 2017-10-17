@@ -2,7 +2,7 @@ package insa.exercise9;
 
 import java.util.Objects;
 
-public abstract class BinaryNode implements Node {
+abstract class BinaryNode implements Node {
 	public final Node leftNode;
 	public final Node rightNode;
 
