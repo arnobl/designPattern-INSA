@@ -1,3 +1,5 @@
 .idea
 oop.iml
 target
+node_modules
+coverage
