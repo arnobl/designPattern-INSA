@@ -1,4 +1,4 @@
-package insa.scalatrait
+package scalatrait
 
 trait Gallop {
 	def gallop(): Unit = {

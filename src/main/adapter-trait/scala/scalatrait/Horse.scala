@@ -1,5 +1,3 @@
-package insa.scalatrait
+package scalatrait
 
-class Horse extends Gallop {
-
-}
+class Horse extends Gallop

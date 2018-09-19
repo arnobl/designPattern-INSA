@@ -1,5 +1,3 @@
-package insa.scalatrait
+package scalatrait
 
-class Bird extends Fly {
-
-}
+class Bird extends Fly

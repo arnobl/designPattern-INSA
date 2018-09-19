@@ -1,4 +1,4 @@
-package insa.proxy.lazyexample
+package lazyexample
 
 object Main {
 	def main(args: Array[String]) {

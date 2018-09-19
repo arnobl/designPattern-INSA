@@ -1,4 +1,4 @@
-package insa.proxy.lazyexample
+package lazyexample
 
 class Foo {
 	private lazy val bar: Object = {

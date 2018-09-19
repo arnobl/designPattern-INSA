@@ -6,8 +6,12 @@ import javafx.scene.shape.Shape;
 // This command is also the Keeper of the memento pattern: it stores the memento
 public class DeleteShape implements Command, Undoable {
 	private Shape shapeToRemove;
+
+	//-------------
+	// Memento attributes
 	private Group formerParent;
 	private int indexShape;
+	//-------------
 
 	public DeleteShape() {
 		super();

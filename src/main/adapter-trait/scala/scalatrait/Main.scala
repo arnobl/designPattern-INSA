@@ -1,4 +1,4 @@
-package insa.scalatrait
+package scalatrait
 
 object Main {
 	def main(args: Array[String]) {

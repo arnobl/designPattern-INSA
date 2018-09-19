@@ -1,5 +1,3 @@
-package insa.scalatrait
+package scalatrait
 
-class Pegase extends Fly with Gallop {
-
-}
+class Pegase extends Fly with Gallop
