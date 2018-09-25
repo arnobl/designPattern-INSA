@@ -1,4 +1,4 @@
-package interpreter;
+package interpreter.lambdaVersion;
 
 @FunctionalInterface
 public interface Expression {

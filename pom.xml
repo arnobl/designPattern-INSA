@@ -54,6 +54,8 @@
                                 <source>src/main/adapter-trait/java</source>
                                 <source>src/main/adapter-trait/scala</source>
                                 <source>src/main/visitor/java</source>
+                                <source>src/main/variance/java</source>
+                                <source>src/main/variance/scala</source>
                             </sources>
                         </configuration>
                     </execution>

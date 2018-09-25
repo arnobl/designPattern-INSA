@@ -1,4 +1,4 @@
-package interpreter;
+package interpreter.basicVersion;
 
 class Mult implements Expression {
 	@Override

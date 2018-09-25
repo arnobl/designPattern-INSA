@@ -1,10 +1,12 @@
-package interpreter;
+package interpreter.basicVersion;
 
 import java.util.ArrayDeque;
 
 class Context extends ArrayDeque<Double> {
 	public double getFinalValue() {
-		if(size() != 1) throw new ArrayIndexOutOfBoundsException();
+		if(size() != 1) {
+			throw new ArrayIndexOutOfBoundsException();
+		}
 
 		return peek();
 	}

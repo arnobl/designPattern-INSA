@@ -1,4 +1,4 @@
-package interpreter;
+package interpreter.basicVersion;
 
 class Add implements Expression {
 	@Override

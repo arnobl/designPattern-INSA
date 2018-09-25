@@ -1,4 +1,4 @@
-package interpreter;
+package interpreter.basicVersion;
 
 class Value implements Expression {
 	protected double value;

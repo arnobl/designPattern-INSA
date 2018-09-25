@@ -1,4 +1,5 @@
-package interpreter;
+package interpreter.lambdaVersion;
+
 
 import java.util.Optional;
 
