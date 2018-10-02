@@ -23,7 +23,9 @@ function jury() {
         }
     );
 
-    promise.then(sucessMsg => console.log(`${sucessMsg} graduated!`)).catch(failMsg => console.log(`Did not graduated :s: ${failMsg}`));
+    promise.
+        then(sucessMsg => console.log(`${sucessMsg} graduated!`)).
+        catch(failMsg => console.log(`Did not graduated :s: ${failMsg}`));
 }
 
 jury();

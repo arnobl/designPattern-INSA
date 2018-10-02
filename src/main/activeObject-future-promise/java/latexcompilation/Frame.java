@@ -64,7 +64,9 @@ public class Frame extends JFrame {
 			try {
 				if(futureImage != null && futureImage.isDone() && futureImage.get() != null) {
 					// If the task is over, getting the picture to be painted.
-					if(image != null) image.flush();
+					if(image != null) {
+						image.flush();
+					}
 					image = futureImage.get();
 					futureImage = null;
 				}
