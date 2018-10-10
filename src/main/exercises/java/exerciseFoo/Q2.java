@@ -1,4 +1,4 @@
-package exercise3;
+package exerciseFoo;
 
 interface AnInterface {
 	// The keyword 'default' identifies operations implemented by default in their interface.

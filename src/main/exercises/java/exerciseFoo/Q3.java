@@ -1,4 +1,4 @@
-package exercise3;
+package exerciseFoo;
 
 import java.util.Random;
 import java.util.stream.IntStream;
