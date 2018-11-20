@@ -1,4 +1,4 @@
-package exerciseFoo;
+package exercise5;
 
 import java.util.Random;
 import java.util.stream.IntStream;
@@ -7,7 +7,7 @@ interface Object {
 	void method();
 }
 
-class ObjectImpl1 implements Object {
+final class ObjectImpl1 implements Object {
 	@Override
 	public void method() {
 		//...

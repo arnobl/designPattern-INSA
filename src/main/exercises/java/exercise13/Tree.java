@@ -1,4 +1,4 @@
-package insa.exercise9;
+package exercise13;
 
 
 import java.util.Objects;
@@ -11,5 +11,9 @@ public class Tree {
 		super();
 		root = Objects.requireNonNull(rootNode);
 		name = Objects.requireNonNull(treeName);
+	}
+
+	public void accept(final VisitorTree v) {
+		v.visitTree(this);
 	}
 }

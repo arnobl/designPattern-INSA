@@ -1,4 +1,4 @@
-package exerciseFoo;
+package exercise8;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -30,7 +30,7 @@ class B extends A {
 class C extends A {
 }
 
-public class Q4 {
+public class Q1 {
 	public static void main(final String[] args) {
 		final Bar bar = new Bar();
 		System.out.println(bar.foo("B"));
