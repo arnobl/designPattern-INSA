@@ -21,12 +21,3 @@ class LoadGameBuilder(val file: String): GameBuilder {
         return Game(Player(p1Name), Player(p2Name))
     }
 }
-
-
-object Main {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        val builder: GameBuilder = NewGameBuilder("foo1", "foo2")
-        val game: Game = builder.build()
-    }
-}
