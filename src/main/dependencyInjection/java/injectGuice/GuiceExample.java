@@ -2,6 +2,7 @@ package injectGuice;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;
+import com.google.inject.Inject;
 import com.google.inject.Injector;
 
 public class GuiceExample {
@@ -10,6 +11,9 @@ public class GuiceExample {
 
 		System.out.println(injector.getInstance(B.class));
 		System.out.println(injector.getInstance(B.class));
+		final B b = injector.getInstance(B.class);
+		System.out.println(b);
+		System.out.println(">>>" + b.getA());
 		System.out.println(injector.getInstance(C.class));
 		System.out.println(injector.getInstance(C.class));
 		System.out.println(injector.getInstance(A.class));
@@ -24,6 +28,12 @@ interface C {
 class A {
 }
 class B {
+	@Inject
+	private A a;
+
+	public A getA() {
+		return a;
+	}
 }
 interface D{
 }
