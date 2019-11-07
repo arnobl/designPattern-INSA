@@ -15,6 +15,11 @@ class Injector {
 class A {
 	@Inject
 	B b;
+
+	@Override
+	public String toString() {
+		return "A{b=" + b + '}';
+	}
 }
 
 class B {}
@@ -22,6 +27,11 @@ class B {}
 class C {
 	@Inject
 	A a;
+
+	@Override
+	public String toString() {
+		return "C{a=" + a + '}';
+	}
 }
 
 @interface Inject {}
