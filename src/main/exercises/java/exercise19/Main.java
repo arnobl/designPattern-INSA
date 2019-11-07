@@ -8,7 +8,6 @@ public class Main {
 
 
 class Injector {
-
 }
 
 
@@ -16,17 +15,23 @@ class A {
 	@Inject
 	B b;
 
+	public A() {}
+
 	@Override
 	public String toString() {
 		return "A{b=" + b + '}';
 	}
 }
 
-class B {}
+class B {
+	public B() {}
+}
 
 class C {
 	@Inject
 	A a;
+
+	public C() {}
 
 	@Override
 	public String toString() {
