@@ -5,6 +5,8 @@ public class Main {
 		final Cow cow = new Cow();
 		// Should not work
 		cow.eat(new Meat());
+		// We want to constraint to only:
+		cow.eat(new Grass());
 
 		final Animal animal = new Cow();
 		// Should not work
