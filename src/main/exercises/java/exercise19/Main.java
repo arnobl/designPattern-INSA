@@ -1,5 +1,6 @@
 package exercise19;
 
+import com.google.common.base.MoreObjects;
 import javax.inject.Inject;
 
 public class Main {
@@ -40,5 +41,25 @@ class C {
 	@Override
 	public String toString() {
 		return "C{a=" + a + '}';
+	}
+}
+
+class E {
+	@Inject
+	F f;
+
+	@Override
+	public String toString() {
+		return MoreObjects.toStringHelper(this).add("f", f).toString();
+	}
+}
+
+class F {
+	@Inject
+	E e;
+
+	@Override
+	public String toString() {
+		return MoreObjects.toStringHelper(this).add("e", e).toString();
 	}
 }
