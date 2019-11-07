@@ -1,5 +1,7 @@
 package exercise19;
 
+import javax.inject.Inject;
+
 public class Main {
 	public static void main(final String[] args) {
 		final var injector = new Injector();
@@ -15,11 +17,13 @@ class A {
 	@Inject
 	B b;
 
+	C c;
+
 	public A() {}
 
 	@Override
 	public String toString() {
-		return "A{b=" + b + '}';
+		return "A{b=" + b + ", c=" + c + '}';
 	}
 }
 
@@ -38,5 +42,3 @@ class C {
 		return "C{a=" + a + '}';
 	}
 }
-
-@interface Inject {}
