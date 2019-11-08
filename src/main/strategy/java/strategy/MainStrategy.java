@@ -1,7 +1,7 @@
 package strategy;
 
 import java.util.Collections;
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -10,7 +10,7 @@ public class MainStrategy {
 		final SortedList<Integer> list = new SortedList<>();
 		list.addAll(IntStream
 			.range(0, 5)
-			.map(i -> new Random().nextInt(10))
+			.map(i -> ThreadLocalRandom.current().nextInt(10))
 			.boxed()
 			.collect(Collectors.toList())
 		);
