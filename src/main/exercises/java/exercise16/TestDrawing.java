@@ -1,4 +1,4 @@
-package exercise15;
+package exercise16;
 
 public class TestDrawing {
 	Canvas drawingArea;
