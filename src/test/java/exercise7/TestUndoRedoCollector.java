@@ -45,10 +45,29 @@ public class TestUndoRedoCollector {
 	@Test
 	void undoEmpty() {
 		collector.undo();
-		Mockito.verify(undoable, Mockito.times(1)).undo();
+		Mockito.verify(undoable, Mockito.never()).undo();
 		Mockito.verify(undoable, Mockito.never()).redo();
 		assertEquals(0, collector.getNbUndoables());
 		assertEquals(0, collector.getNbRedoables());
+	}
+
+	@Test
+	void redoEmpty() {
+		collector.redo();
+		Mockito.verify(undoable, Mockito.never()).undo();
+		Mockito.verify(undoable, Mockito.never()).redo();
+		assertEquals(0, collector.getNbUndoables());
+		assertEquals(0, collector.getNbRedoables());
+	}
+
+	@Test
+	void redoWithNoUndo() {
+		collector.add(undoable);
+		collector.redo();
+		Mockito.verify(undoable, Mockito.never()).undo();
+		Mockito.verify(undoable, Mockito.never()).redo();
+		assertEquals(0, collector.getNbUndoables());
+		assertEquals(1, collector.getNbRedoables());
 	}
 
 	@Test
