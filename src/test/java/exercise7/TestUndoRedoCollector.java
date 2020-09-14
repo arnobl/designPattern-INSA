@@ -66,8 +66,8 @@ public class TestUndoRedoCollector {
 		collector.redo();
 		Mockito.verify(undoable, Mockito.never()).undo();
 		Mockito.verify(undoable, Mockito.never()).redo();
-		assertEquals(0, collector.getNbUndoables());
-		assertEquals(1, collector.getNbRedoables());
+		assertEquals(1, collector.getNbUndoables());
+		assertEquals(0, collector.getNbRedoables());
 	}
 
 	@Test
