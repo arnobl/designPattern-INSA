@@ -10,4 +10,12 @@ public class UndoRedoCollector {
 
 	public void redo() {
 	}
+
+	public int getNbUndoables() {
+		return 0;
+	}
+
+	public int getNbRedoables() {
+		return 0;
+	}
 }
