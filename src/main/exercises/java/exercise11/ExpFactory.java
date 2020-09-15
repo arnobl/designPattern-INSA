@@ -1,6 +1,9 @@
 package exercise11;
 
 public class ExpFactory {
+	public ArithmExp createExp(final String exp) {
+		return null;
+	}
 }
 
 interface ArithmExp {}
