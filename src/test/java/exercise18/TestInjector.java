@@ -1,6 +1,7 @@
 package exercise18;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -65,13 +66,13 @@ public class TestInjector {
 		assertNull(e.f.e);
 	}
 
-//	@Disabled
+	@Disabled
 	@Test
 	void testArray() {
 		assertNull(injector.createInstance(Object[].class));
 	}
 
-//	@Disabled
+	@Disabled
 	@Test
 	void testNoDefaultConstructor() {
 		assertNull(injector.createInstance(I.class));
