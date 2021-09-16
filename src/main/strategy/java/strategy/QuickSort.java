@@ -16,7 +16,7 @@ public class QuickSort<E extends Comparable<E>> extends SortImpl<E> {
 		System.out.printf("After quick sort: %s\n", list);
 	}
 
-	private void sort(int from, int to) {
+	private void sort(final int from, final int to) {
 		if(from < to) {
 			int left = from + 1;
 			int right = to;
