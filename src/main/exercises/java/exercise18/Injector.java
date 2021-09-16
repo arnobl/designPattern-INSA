@@ -4,9 +4,9 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.util.Optional;
 
-// There already exists Inject annotation in javax.inject for example.
+// There already exists Inject annotations in javax.inject for example.
 // Retention means: by default an annotation is not kept in class files to be used at run time.
-// So, we need to tell the computer this annotation Inject must be saved in class files
+// So, we need to tell the compiler this annotation Inject must be saved in class files
 // (otherwise, the injection will not work as the program will not find annotations at run time).
 @Retention(RetentionPolicy.RUNTIME)
 @interface Inject {
