@@ -1,7 +1,6 @@
 package exercise7;
 
 public class UndoRedoCollector {
-
 	public void add(final Undoable undoable) {
 	}
 
