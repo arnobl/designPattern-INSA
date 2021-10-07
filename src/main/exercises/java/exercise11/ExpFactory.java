@@ -1,20 +1,22 @@
 package exercise11;
 
+import java.util.Optional;
+
 public class ExpFactory {
-	public ArithmExp createExp(final String exp) {
+	public Optional<ArithmExp> createExp(final String exp) {
 		if("mult".equals(exp)) {
-			return new Mult();
+			return Optional.of(new Mult());
 		}
 		if("plus".equals(exp)) {
-			return new Plus();
+			return Optional.of(new Plus());
 		}
 		if("min".equals(exp)) {
-			return new Min();
+			return Optional.of(new Min());
 		}
 		if("mod".equals(exp)) {
-			return new Mod();
+			return Optional.of(new Mod());
 		}
-		return null;
+		return Optional.empty();
 	}
 }
 
