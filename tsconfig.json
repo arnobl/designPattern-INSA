@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "outDir": "target"
-    },
-  "include": [
-    "src/**/ts/*.ts"
-  ]
-}
