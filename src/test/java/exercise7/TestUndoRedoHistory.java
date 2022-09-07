@@ -6,14 +6,14 @@ import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class TestUndoRedoCollector {
-	UndoRedoCollector collector;
+public class TestUndoRedoHistory {
+	UndoRedoHistory collector;
 	Undoable undoable;
 	Undoable undoable2;
 
 	@BeforeEach
 	void setUp() {
-		collector = new UndoRedoCollector();
+		collector = new UndoRedoHistory();
 		undoable = Mockito.mock(Undoable.class);
 		undoable2 = Mockito.mock(Undoable.class);
 	}

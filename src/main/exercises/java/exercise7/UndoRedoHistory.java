@@ -1,6 +1,6 @@
 package exercise7;
 
-public class UndoRedoCollector {
+public class UndoRedoHistory {
 	public void add(final Undoable undoable) {
 	}
 
