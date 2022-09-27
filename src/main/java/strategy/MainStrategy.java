@@ -6,6 +6,13 @@ import java.util.stream.Collectors;
 
 public class MainStrategy {
 	public static void main(final String[] args) {
+		StringBuilder foo = new StringBuilder();
+
+		for(int i=0; i<10; i++) {
+			foo.append('f');
+		}
+		String res = foo.toString();
+
 		final SortedList<Integer> list = new SortedList<>();
 
 		list.addAll(ThreadLocalRandom
