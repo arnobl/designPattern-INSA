@@ -1,4 +1,4 @@
-package file;
+package proxylazy.file;
 
 // Such a proxy is usually developed when you cannot modify or sub-class legacy code.
 public class ProxyFile implements File {
