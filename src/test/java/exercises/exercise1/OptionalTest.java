@@ -32,8 +32,7 @@ public class OptionalTest {
             Optional<Foo> opt = Optional.of(foo);
             if (opt.isPresent()) {
             }
-            Optional<String> res = opt.map(value -> value.toString());
-            String str = res.orElse(" ");
+            String res = opt.map(value -> value.toString()).orElse(" ");
         }
 
         @Test
