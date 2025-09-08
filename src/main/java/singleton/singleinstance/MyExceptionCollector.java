@@ -30,3 +30,11 @@ public class MyExceptionCollector extends ArrayList<Exception> {
 		super();
 	}
 }
+
+class Main {
+	void main() {
+		MyExceptionCollector.getInstance().add(new NullPointerException());
+		MyExceptionCollector.setInstance(new MyExceptionCollector());
+	}
+}
+
