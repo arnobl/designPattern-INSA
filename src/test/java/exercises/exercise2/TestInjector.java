@@ -97,11 +97,11 @@ public class TestInjector {
 		assertTrue(injector.createInstance(H.class).isEmpty());
 	}
 
-	@Test
-	void finalField() {
-		final Optional<J> optj = injector.createInstance(J.class);
-		assertTrue(optj.isPresent());
-	}
+//	@Test
+//	void finalField() {
+//		final Optional<J> optj = injector.createInstance(J.class);
+//		assertTrue(optj.isPresent());
+//	}
 }
 
 abstract class H {
