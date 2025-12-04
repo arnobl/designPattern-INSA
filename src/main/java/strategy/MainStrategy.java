@@ -12,7 +12,7 @@ public class MainStrategy {
 			.current()
 			.ints(5, 0, 10)
 			.boxed()
-			.collect(Collectors.toList())
+			.toList()
 		);
 
 		list.sort();
